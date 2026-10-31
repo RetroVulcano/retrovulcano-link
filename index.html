@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101b2b">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#f4f5f8">
+<meta name="color-scheme" content="light">
 <title>David González — Gestión comercial y marketing digital</title>
 <meta name="description" content="David González. Gestión comercial, marketing digital, liderazgo de equipos, calidad y optimización de procesos.">
 <link rel="canonical" href="https://www.retrovulcano.link/">
 <link rel="icon" href="favicon.png" type="image/png">
-
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="es_ES">
 <meta property="og:title" content="David González — Gestión comercial y marketing digital">
@@ -17,275 +16,248 @@
 <meta property="og:url" content="https://www.retrovulcano.link/">
 <meta property="og:image" content="https://www.retrovulcano.link/avatar.png">
 <meta name="twitter:card" content="summary">
-
 <style>
-:root{
-  --bg:#0b1220;--panel:#111d30;--panel2:#15243a;
-  --text:#f2f5f9;--muted:#b4c0d0;--line:rgba(255,255,255,.12);
-  --accent:#ff9b52;--cyan:#73d5d0;--max:1120px;
-  /* Tipografías del sistema: sin peticiones a terceros */
-  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --font-head:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
-}
+:root{--bg:#f4f5f8;--ink:#0d1017;--blue:#3a47ff;--sky:#dfe3ff;--org:#ff6a2b;--peach:#ffe3d3;--mut:#556070;--white:#fff;--max:1160px;
+--f:"SF Pro Display","Segoe UI Variable Display","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:16px}
-body{margin:0;background:radial-gradient(ellipse at 85% 5%,rgba(35,91,116,.3),transparent 34%),var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.65}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.02rem/1.65 var(--f)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
+h1,h2,h3{margin:0;font-family:var(--f);font-weight:800;letter-spacing:-.04em;line-height:1.05}
 .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-
-.skip{position:absolute;left:-9999px;top:8px;background:var(--accent);color:#1b2431;padding:8px 14px;border-radius:8px;font-weight:700;z-index:10}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--blue);color:#fff;padding:8px 14px;border-radius:99px;z-index:20}
 .skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--org);outline-offset:3px}
+.eyebrow{display:inline-block;padding:6px 14px;border-radius:99px;background:var(--white);border:1px solid #dde1ea;font-size:.85rem;font-weight:600;color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:99px;font-weight:700;background:var(--white);border:1.5px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px);background:var(--ink);color:#fff}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.text-link{font-weight:700;color:var(--blue);border-bottom:2px solid currentColor}
+.text-link:hover{color:var(--org)}
 
-/* Cabecera */
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.02em}
-.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--accent);color:#172033;font-family:var(--font-head);font-weight:800}
-.nav{display:flex;gap:24px;font-size:.92rem;color:var(--muted)}
-.nav a:hover,.text-link:hover{color:var(--accent)}
+.topbar{position:sticky;top:14px;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:14px;width:min(var(--max),calc(100% - 28px));margin:14px auto 0;padding:9px 12px 9px 12px;border-radius:99px;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #dde1ea}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;font-size:.8rem}
+.nav{display:flex;gap:4px;font-size:.92rem;font-weight:600}
+.nav a{padding:8px 14px;border-radius:99px;color:var(--mut)}
+.nav a:hover{background:var(--sky);color:var(--blue)}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center;padding:78px 0 75px}
-.eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;font-weight:700}
-.hero h1{font:800 clamp(2.5rem,5vw,4.6rem)/1.08 var(--font-head);letter-spacing:-.055em;margin:18px 0}
-.hero h1 span{color:var(--accent)}
-.lead{font-size:1.18rem;color:#d2dbe6;max-width:660px}
-.hero-copy{color:var(--muted);max-width:620px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.actions.flush{margin-top:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:10px;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--accent);color:#1b2431;border-color:var(--accent)}
-.btn.secondary{background:rgba(255,255,255,.04)}
-.portrait-wrap{position:relative;justify-self:center;width:min(100%,340px)}
-.portrait-wrap:before{content:"";position:absolute;inset:15px -15px -15px 15px;border:1px solid rgba(115,213,208,.5);border-radius:28px}
-.portrait{position:relative;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px;border:1px solid rgba(255,255,255,.15);box-shadow:0 24px 70px #0007}
-.portrait-tag{position:absolute;bottom:18px;left:-25px;background:var(--panel2);border:1px solid var(--line);padding:11px 15px;border-radius:12px;font-size:.85rem;box-shadow:0 12px 30px #0005}
-.portrait-tag strong{display:block;color:var(--cyan)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:70px 0 50px}
+.hero h1{font-size:clamp(3rem,7.4vw,6.6rem);margin:20px 0 26px}
+.hero h1 span{display:block;color:var(--blue)}
+.lead{font-size:1.25rem;max-width:620px;margin:0 0 14px;font-weight:500}
+.hero-copy{color:var(--mut);max-width:590px;margin:0}
+.art{position:relative;justify-self:center;width:min(100%,380px);animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.art:before{content:"";position:absolute;width:62%;aspect-ratio:1;right:-9%;top:-5%;border-radius:50%;background:var(--org)}
+.portrait{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 36px 36px;border:6px solid var(--bg)}
+.tag{position:absolute;left:-26px;bottom:26px;padding:12px 18px;border-radius:20px;background:var(--ink);color:#fff;font-size:.86rem;box-shadow:0 18px 40px #0d101733}
+.tag strong{display:block;font-size:1rem}
+.badge{position:absolute;right:-22px;bottom:-30px;width:118px;height:118px;border-radius:50%;background:var(--white);border:1px solid #dde1ea;display:grid;place-items:center}
+.badge svg{width:100%;height:100%;animation:spin 18s linear infinite}
+.badge text{font:700 10.5px var(--f);fill:var(--ink)}
+.badge b{position:absolute;font-size:1.6rem;color:var(--blue)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}}
 
-/* Resumen */
-.stats{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);margin-bottom:82px}
-.stat{padding:22px 26px}
-.stat+.stat{border-left:1px solid var(--line)}
-.stat strong{font:700 1.12rem var(--font-head);display:block}
-.stat span{color:var(--muted);font-size:.9rem}
+.stats{list-style:none;margin:30px auto 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{padding:28px;border-radius:28px;background:var(--white);border:1px solid #dde1ea}
+.stat:first-child{background:var(--blue);color:#fff;border-color:var(--blue)}
+.stat:nth-child(2){background:var(--ink);color:#fff;border-color:var(--ink)}
+.stat strong{display:block;font-size:1.35rem;letter-spacing:-.03em;margin-bottom:4px}
+.stat span{opacity:.78;font-size:.95rem}
 
-/* Secciones */
-.section{padding:20px 0 76px}
-.section-head{max-width:700px;margin-bottom:28px}
-.section h2{font:800 clamp(1.8rem,3vw,2.6rem)/1.2 var(--font-head);letter-spacing:-.035em;margin:8px 0 12px}
-.section h3.sub{font-family:var(--font-head);margin:30px 0 0}
-.section-intro{color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{padding:24px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}
-.card .num{color:var(--accent);font:800 1rem var(--font-head)}
-.card h3{font:700 1.13rem var(--font-head);margin:13px 0 8px}
-.card p{color:var(--muted);margin:0;font-size:.96rem}
+.section{padding:100px 0 0}
+.head{max-width:760px;margin-bottom:40px}
+.head h2{font-size:clamp(2rem,4.4vw,3.6rem);margin:18px 0 16px}
+.intro{color:var(--mut);margin:0;font-size:1.08rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{padding:32px;border-radius:32px;background:var(--white);min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.card:nth-child(2){background:var(--sky)}.card:nth-child(3){background:var(--peach)}
+.card h3{font-size:1.5rem;margin-bottom:10px}
+.card p{margin:0;color:#3d4756}
 
-/* Experiencia */
-.experience{display:grid;grid-template-columns:.7fr 1.3fr;gap:42px}
-.experience-aside{padding:25px;border-radius:16px;background:var(--panel);border:1px solid var(--line);height:max-content}
-.experience-aside p{color:var(--muted)}
-.timeline{border-left:1px solid rgba(115,213,208,.45);padding-left:25px}
-.job{position:relative;padding:0 0 28px}
-.job:before{content:"";position:absolute;left:-31px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px var(--bg)}
-.job h3{margin:0;font:700 1.08rem var(--font-head)}
-.job .where{color:var(--accent);font-size:.9rem;font-weight:600}
-.job p{margin:8px 0 0;color:var(--muted)}
+.exp{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px;align-items:start}
+.aside{position:sticky;top:100px;padding:34px;border-radius:32px;background:var(--ink);color:#fff}
+.aside .eyebrow{background:#ffffff1a;border-color:#ffffff33;color:#fff}
+.aside h3{font-size:1.9rem;margin:20px 0 16px}
+.aside p{color:#c4cad6}
+.aside .text-link{color:var(--org)}
+.jobs{display:grid;gap:12px}
+details{border-radius:26px;background:var(--white);border:1px solid #dde1ea;overflow:hidden}
+details[open]{border-color:var(--blue);box-shadow:0 14px 34px #3a47ff1f}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:8.2rem 1fr 28px;gap:16px;align-items:center;padding:22px 24px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:1.7rem;line-height:1;color:var(--blue);transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+.yr{font-weight:800;font-size:1.15rem;letter-spacing:-.03em;color:var(--blue)}
+summary h3{font-size:1.1rem;letter-spacing:-.02em;line-height:1.3}
+.where{display:block;font-size:.88rem;font-weight:600;color:var(--org);margin-top:3px}
+.body{padding:0 24px 24px calc(8.2rem + 40px);margin:0;color:var(--mut)}
 
-/* Competencias */
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none}
-.chip{padding:8px 12px;border-radius:100px;border:1px solid var(--line);color:#d7e1ec;font-size:.9rem;background:rgba(255,255,255,.025)}
-.languages{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 0;padding:0;list-style:none}
-.language{padding:16px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}
-.language strong{display:block}
-.language span{font-size:.88rem;color:var(--muted)}
+.marq{margin-top:20px;background:var(--blue);color:#fff;overflow:hidden;padding:26px 0}
+.track{display:flex;width:max-content;animation:slide 40s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+.skills{display:flex;gap:46px;list-style:none;margin:0;padding:0 23px;white-space:nowrap}
+.skills li{font-size:clamp(1.5rem,3vw,2.3rem);font-weight:800;letter-spacing:-.03em}
+.skills li:after{content:"✦";margin-left:46px;color:var(--org)}
+@keyframes slide{to{transform:translateX(-50%)}}
+.sub{font-size:1.5rem;margin:50px 0 18px}
+.langs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lang{padding:22px;border-radius:24px;background:var(--white);border:1px solid #dde1ea}
+.lang strong{display:block;font-size:1.5rem;letter-spacing:-.03em}
+.lang span{color:var(--mut);font-size:.92rem}
+.train{font-size:1.15rem;font-weight:600;max-width:820px;margin:0}
 
-/* Proyectos */
-.projects{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.project{padding:25px;border-radius:16px;border:1px solid var(--line);background:var(--panel)}
-.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.project-icon{font-size:1.5rem}
-.project h3{font:700 1.25rem var(--font-head);margin:12px 0 8px}
-.project p{color:var(--muted);margin:0 0 16px}
-.text-link{font-weight:700;color:var(--cyan)}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.project{position:relative;display:flex;flex-direction:column;min-height:340px;padding:34px;border-radius:36px;overflow:hidden;background:var(--sky);transition:background .3s,color .3s}
+.project:last-child{background:var(--peach)}
+.project:hover{background:var(--ink);color:#fff}
+.project p{color:inherit;opacity:.8;margin:0 0 20px;max-width:420px}
+.ptop{display:flex;justify-content:space-between;font-weight:600;font-size:.9rem}
+.pico{font-size:1.8rem;color:var(--blue)}.project:last-child .pico{color:var(--org)}
+.project h3{font-size:clamp(2rem,4vw,3.2rem);margin:auto 0 12px}
+.project:hover .text-link{color:var(--org)}
+.project .text-link{align-self:flex-start}
 
-/* Contacto y pie */
-.contact{padding:36px;border-radius:22px;background:linear-gradient(120deg,#172b40,#142238);border:1px solid rgba(115,213,208,.25);display:flex;justify-content:space-between;align-items:center;gap:30px}
-.contact p{color:var(--muted);margin:8px 0 0}
-.contact h2{margin:0}
-.footer{margin-top:70px;padding:25px 0 35px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.88rem}
-.footer a{color:var(--cyan)}
-.small-note{font-size:.82rem;color:var(--muted)}
+.contact{margin-top:100px;padding:70px 56px;border-radius:44px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+.contact .eyebrow{background:#ffffff1a;border-color:#ffffff33;color:#fff}
+.contact h2{font-size:clamp(3rem,9vw,7.5rem);margin:20px 0 16px}
+.contact p{margin:0;color:#c4cad6;max-width:460px}
+.contact .actions{margin:0;flex-direction:column;align-items:stretch}
+.contact .btn{background:transparent;color:#fff;border-color:#ffffff66}
+.contact .btn.primary{background:var(--org);border-color:var(--org);color:var(--ink)}
+.contact .btn:hover{background:#fff;color:var(--ink)}
+.footer{display:flex;justify-content:space-between;gap:20px;padding:34px 0 40px;color:var(--mut);font-size:.88rem}
+.footer a{color:var(--blue);font-weight:600}
 
-:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
-
-@media(max-width:800px){
-  .hero{grid-template-columns:1fr;gap:40px;padding:55px 0}
-  .portrait-wrap{width:min(68%,300px);margin:0 auto 10px;grid-row:1}
-  .hero-content{grid-row:2}
-  .grid,.projects,.experience{grid-template-columns:1fr}
-  .experience{gap:25px}
-  .languages{grid-template-columns:repeat(2,1fr)}
-  .stats{margin-bottom:60px}
-  .nav{gap:12px;font-size:.82rem}
-  .contact{align-items:flex-start;flex-direction:column}
+@media(max-width:880px){
+.hero{grid-template-columns:1fr;padding-top:44px}
+.art{width:min(76%,340px);grid-row:1;margin-bottom:30px}
+.grid,.projects,.exp,.stats{grid-template-columns:1fr}
+.aside{position:static}
+.langs{grid-template-columns:repeat(2,1fr)}
+.contact{flex-direction:column;align-items:flex-start;padding:48px 28px}
+.contact .actions{align-self:stretch}
 }
-@media(max-width:520px){
-  .wrap{width:calc(100% - 28px)}
-  .topbar{flex-wrap:wrap}
-  .nav{width:100%;overflow-x:auto;white-space:nowrap;padding-bottom:4px}
-  .hero h1{font-size:2.65rem}
-  .lead{font-size:1.06rem}
-  .stats{grid-template-columns:1fr}
-  .stat{padding:16px 20px}
-  .stat+.stat{border-left:0;border-top:1px solid var(--line)}
-  .section{padding-bottom:58px}
-  .contact{padding:25px}
-  .footer{flex-direction:column}
-  .portrait-tag{left:-12px}
+@media(max-width:600px){
+.wrap{width:calc(100% - 28px)}
+.brand span:last-child{display:none}
+.nav{overflow-x:auto;white-space:nowrap}.nav a{padding:8px 10px}
+summary{grid-template-columns:1fr 24px;gap:6px}.yr{grid-column:1/-1}
+.body{padding:0 24px 24px}
+.footer{flex-direction:column}
+.tag{left:-10px}
 }
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*:before,*:after{transition:none!important}
-}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.marq{overflow-x:auto}}
 </style>
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
-
-<header class="wrap topbar">
+<header class="topbar">
   <a class="brand" href="#inicio" aria-label="David González, inicio"><span class="brand-mark" aria-hidden="true">DG</span><span>David González</span></a>
-  <nav class="nav" aria-label="Navegación principal">
-    <a href="#perfil">Perfil</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#competencias">Competencias</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <nav class="nav" aria-label="Navegación principal"><a href="#perfil">Perfil</a><a href="#experiencia">Experiencia</a><a href="#competencias">Competencias</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></nav>
 </header>
 
 <main id="contenido">
-<section class="wrap hero" id="inicio">
-  <div class="hero-content">
-    <div class="eyebrow">Gestión · Personas · Procesos</div>
-    <h1>Conectar personas,<br><span>negocio y tecnología.</span></h1>
+<section class="wrap" id="inicio">
+ <div class="hero">
+  <div>
+    <span class="eyebrow">Gestión · Personas · Procesos</span>
+    <h1>Conectar personas, <span>negocio y tecnología.</span></h1>
     <p class="lead">Soy David González, técnico en Gestión Comercial y Marketing Digital, con experiencia en liderazgo de equipos, grandes cuentas, calidad y operaciones de soporte.</p>
     <p class="hero-copy">Mi trayectoria combina orientación al cliente, coordinación de personas y mejora continua. Me interesa transformar los retos cotidianos en procesos más claros, equipos más cohesionados y mejores experiencias de servicio.</p>
     <div class="actions">
       <a class="btn primary" href="mailto:contacto@retrovulcano.es?subject=Contacto%20profesional">✉ Contactar directamente</a>
-      <a class="btn secondary" href="https://www.linkedin.com/in/retrovulcano" target="_blank" rel="noopener noreferrer">↗ Ver perfil de LinkedIn</a>
+      <a class="btn" href="https://www.linkedin.com/in/retrovulcano" target="_blank" rel="noopener noreferrer">↗ Ver perfil de LinkedIn</a>
     </div>
   </div>
-  <div class="portrait-wrap">
+  <div class="art">
     <img class="portrait" src="avatar.png" width="680" height="680" fetchpriority="high" alt="Avatar ilustrado de David González">
-    <div class="portrait-tag"><strong>David González</strong>Santa Cruz de Tenerife</div>
+    <div class="tag"><strong>David González</strong>Santa Cruz de Tenerife</div>
+    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text><textPath href="#c" textLength="272">Gestión · Personas · Procesos ·</textPath></text></svg><b>↗</b></div>
   </div>
-</section>
-
-<ul class="wrap stats" aria-label="Resumen profesional">
+ </div>
+ <ul class="stats" aria-label="Resumen profesional">
   <li class="stat"><strong>Gestión comercial</strong><span>Grandes cuentas y relaciones con clientes</span></li>
   <li class="stat"><strong>Liderazgo de equipos</strong><span>Coordinación, rendimiento y comunicación</span></li>
   <li class="stat"><strong>Calidad y operaciones</strong><span>Procesos, soporte y mejora continua</span></li>
-</ul>
+ </ul>
+</section>
 
 <section class="wrap section" id="perfil">
-  <div class="section-head">
-    <div class="eyebrow">01 / Perfil profesional</div>
-    <h2>Experiencia con una mirada transversal.</h2>
-    <p class="section-intro">He desarrollado mi carrera en los sectores de tecnología y telecomunicaciones, en funciones que conectan el servicio al cliente, las operaciones y los objetivos de negocio.</p>
-  </div>
+  <div class="head"><span class="eyebrow">01 / Perfil profesional</span><h2>Experiencia con una mirada transversal.</h2>
+  <p class="intro">He desarrollado mi carrera en los sectores de tecnología y telecomunicaciones, en funciones que conectan el servicio al cliente, las operaciones y los objetivos de negocio.</p></div>
   <div class="grid">
-    <article class="card"><div class="num">01</div><h3>Personas y liderazgo</h3><p>Coordinación de equipos, comunicación abierta, motivación y seguimiento de objetivos en entornos de soporte y atención al cliente.</p></article>
-    <article class="card"><div class="num">02</div><h3>Clientes y negocio</h3><p>Gestión de grandes cuentas, desarrollo de relaciones comerciales, prospección y colaboración con equipos de ventas.</p></article>
-    <article class="card"><div class="num">03</div><h3>Calidad y mejora</h3><p>Supervisión operativa, evaluación del rendimiento, revisión de herramientas y atención a la calidad de los procesos.</p></article>
+    <article class="card"><h3>Personas y liderazgo</h3><p>Coordinación de equipos, comunicación abierta, motivación y seguimiento de objetivos en entornos de soporte y atención al cliente.</p></article>
+    <article class="card"><h3>Clientes y negocio</h3><p>Gestión de grandes cuentas, desarrollo de relaciones comerciales, prospección y colaboración con equipos de ventas.</p></article>
+    <article class="card"><h3>Calidad y mejora</h3><p>Supervisión operativa, evaluación del rendimiento, revisión de herramientas y atención a la calidad de los procesos.</p></article>
   </div>
 </section>
 
 <section class="wrap section" id="experiencia">
-  <div class="section-head">
-    <div class="eyebrow">02 / Trayectoria</div>
-    <h2>Una carrera construida entre servicio, equipos y tecnología.</h2>
-  </div>
-  <div class="experience">
-    <aside class="experience-aside">
-      <div class="eyebrow">Mi enfoque</div>
+  <div class="head"><span class="eyebrow">02 / Trayectoria</span><h2>Una carrera construida entre servicio, equipos y tecnología.</h2></div>
+  <div class="exp">
+    <aside class="aside">
+      <span class="eyebrow">Mi enfoque</span>
       <h3>Objetivos claros. Equipos conectados. Servicio excelente.</h3>
       <p>Me esfuerzo por crear entornos de trabajo donde la comunicación, la confianza y la responsabilidad compartida ayuden a conseguir resultados sostenibles.</p>
-      <p class="small-note">La selección que aparece aquí resume áreas destacadas de mi trayectoria; puedes consultar el detalle completo en LinkedIn.</p>
+      <p>La selección que aparece aquí resume áreas destacadas de mi trayectoria; puedes consultar el detalle completo en LinkedIn.</p>
       <a class="text-link" href="https://www.linkedin.com/in/retrovulcano" target="_blank" rel="noopener noreferrer">Ver trayectoria completa ↗</a>
     </aside>
-    <div class="timeline">
-      <article class="job"><h3>Jefe de equipo de soporte — Compañía Cervecera de Canarias</h3><div class="where">Atos · 2020–2026</div><p>Gestión de clientes y apoyo a televentas y CAT. Coordinación del equipo, cohesión y seguimiento de los objetivos establecidos.</p></article>
-      <article class="job"><h3>Coordinación técnica — Scottish Power</h3><div class="where">Atos · 2023–2025</div><p>Supervisión operativa, seguimiento del rendimiento y revisión de herramientas y sistemas para favorecer su eficacia.</p></article>
-      <article class="job"><h3>Jefe de equipo de CAU — La Liga Tech</h3><div class="where">Atos · 2023–2024</div><p>Liderazgo de equipo, motivación y fomento de un entorno de comunicación positiva y colaboración.</p></article>
-      <article class="job"><h3>Gestor de grandes cuentas y coordinación comercial</h3><div class="where">Center Gematel · 2004–2011</div><p>Gestión de grandes clientes, coordinación de ventas y almacén, y relación con grandes superficies.</p></article>
-      <article class="job"><h3>Experiencia comercial y de tecnología</h3><div class="where">Telecomunicaciones, retail y servicios</div><p>Trayectoria anterior en ventas, implantación comercial, gestión de tienda, visual merchandising y grandes cuentas.</p></article>
+    <div class="jobs">
+      <details open><summary><span class="yr">2020–2026</span><h3>Jefe de equipo de soporte — Compañía Cervecera de Canarias<span class="where">Atos</span></h3></summary><p class="body">Gestión de clientes y apoyo a televentas y CAT. Coordinación del equipo, cohesión y seguimiento de los objetivos establecidos.</p></details>
+      <details><summary><span class="yr">2023–2025</span><h3>Coordinación técnica — Scottish Power<span class="where">Atos</span></h3></summary><p class="body">Supervisión operativa, seguimiento del rendimiento y revisión de herramientas y sistemas para favorecer su eficacia.</p></details>
+      <details><summary><span class="yr">2023–2024</span><h3>Jefe de equipo de CAU — La Liga Tech<span class="where">Atos</span></h3></summary><p class="body">Liderazgo de equipo, motivación y fomento de un entorno de comunicación positiva y colaboración.</p></details>
+      <details><summary><span class="yr">2004–2011</span><h3>Gestor de grandes cuentas y coordinación comercial<span class="where">Center Gematel</span></h3></summary><p class="body">Gestión de grandes clientes, coordinación de ventas y almacén, y relación con grandes superficies.</p></details>
+      <details><summary><span class="yr">Antes</span><h3>Experiencia comercial y de tecnología<span class="where">Telecomunicaciones, retail y servicios</span></h3></summary><p class="body">Trayectoria anterior en ventas, implantación comercial, gestión de tienda, visual merchandising y grandes cuentas.</p></details>
     </div>
   </div>
 </section>
 
-<section class="wrap section" id="competencias">
-  <div class="section-head">
-    <div class="eyebrow">03 / Competencias</div>
-    <h2>Lo que aporto a un equipo.</h2>
-    <p class="section-intro">Una combinación de visión comercial, capacidad de coordinación y familiaridad con entornos tecnológicos.</p>
+<section class="section" id="competencias">
+  <div class="wrap head"><span class="eyebrow">03 / Competencias</span><h2>Lo que aporto a un equipo.</h2>
+  <p class="intro">Una combinación de visión comercial, capacidad de coordinación y familiaridad con entornos tecnológicos.</p></div>
+  <div class="marq"><div class="track">
+    <ul class="skills"><li>Gestión comercial y ventas</li><li>Marketing digital</li><li>Liderazgo de equipos</li><li>Gestión de grandes cuentas</li><li>Evaluación del rendimiento</li><li>Calidad y mejora de procesos</li><li>Atención al cliente</li><li>Supervisión de sistemas</li><li>Visual merchandising</li><li>Comunicación interpersonal</li></ul>
+    <ul class="skills" aria-hidden="true"><li>Gestión comercial y ventas</li><li>Marketing digital</li><li>Liderazgo de equipos</li><li>Gestión de grandes cuentas</li><li>Evaluación del rendimiento</li><li>Calidad y mejora de procesos</li><li>Atención al cliente</li><li>Supervisión de sistemas</li><li>Visual merchandising</li><li>Comunicación interpersonal</li></ul>
+  </div></div>
+  <div class="wrap">
+    <h3 class="sub">Idiomas</h3>
+    <ul class="langs">
+      <li class="lang"><strong>Español</strong><span>Nativo</span></li>
+      <li class="lang"><strong>Inglés</strong><span>Fluido profesional</span></li>
+      <li class="lang"><strong>Alemán</strong><span>Fluido profesional</span></li>
+      <li class="lang"><strong>Francés</strong><span>Competencia básica</span></li>
+    </ul>
+    <h3 class="sub">Formación</h3>
+    <p class="train">Especialista en Marketing Digital · Dirección y Gestión de Empresas · Marketing · Visual Merchandising · Mando Intermedio Comercial.</p>
   </div>
-  <ul class="skills">
-    <li class="chip">Gestión comercial y ventas</li>
-    <li class="chip">Marketing digital</li>
-    <li class="chip">Liderazgo de equipos</li>
-    <li class="chip">Gestión de grandes cuentas</li>
-    <li class="chip">Evaluación del rendimiento</li>
-    <li class="chip">Calidad y mejora de procesos</li>
-    <li class="chip">Atención al cliente</li>
-    <li class="chip">Supervisión de sistemas</li>
-    <li class="chip">Visual merchandising</li>
-    <li class="chip">Comunicación interpersonal</li>
-  </ul>
-  <h3 class="sub">Idiomas</h3>
-  <ul class="languages">
-    <li class="language"><strong>Español</strong><span>Nativo</span></li>
-    <li class="language"><strong>Inglés</strong><span>Fluido profesional</span></li>
-    <li class="language"><strong>Alemán</strong><span>Fluido profesional</span></li>
-    <li class="language"><strong>Francés</strong><span>Competencia básica</span></li>
-  </ul>
-  <h3 class="sub">Formación</h3>
-  <p class="section-intro">Especialista en Marketing Digital · Dirección y Gestión de Empresas · Marketing · Visual Merchandising · Mando Intermedio Comercial.</p>
 </section>
 
 <section class="wrap section" id="proyectos">
-  <div class="section-head">
-    <div class="eyebrow">04 / Ecosistema personal</div>
-    <h2>Curiosidad que también se convierte en proyectos.</h2>
-    <p class="section-intro">De forma independiente creo contenido sobre divulgación y tecnología para canalizar mi curiosidad y seguir aprendiendo, siempre con una clara separación respecto a mi actividad profesional. Si quieres conocer más sobre estos proyectos o seguirme en redes sociales, puedes hacerlo en <a class="text-link" href="https://retrovulcano.es/" target="_blank" rel="noopener noreferrer">retrovulcano.es</a>.</p>
-  </div>
+  <div class="head"><span class="eyebrow">04 / Ecosistema personal</span><h2>Curiosidad que también se convierte en proyectos.</h2>
+  <p class="intro">De forma independiente creo contenido sobre divulgación y tecnología para canalizar mi curiosidad y seguir aprendiendo, siempre con una clara separación respecto a mi actividad profesional. Si quieres conocer más sobre estos proyectos o seguirme en redes sociales, puedes hacerlo en <a class="text-link" href="https://retrovulcano.es/" target="_blank" rel="noopener noreferrer">retrovulcano.es</a>.</p></div>
   <div class="projects">
-    <article class="project">
-      <div class="project-top"><span class="eyebrow">Ciencia · Historia · Tecnología</span><span class="project-icon" aria-hidden="true">✦</span></div>
-      <h3>Orbe Autómata</h3>
-      <p>Un espacio de divulgación sobre ciencia, sistemas complejos e historia de la tecnología.</p>
-      <a class="text-link" href="https://www.orbeautomata.es/" target="_blank" rel="noopener noreferrer">Explorar Orbe Autómata ↗</a>
-    </article>
-    <article class="project">
-      <div class="project-top"><span class="eyebrow">Cultura retro · Videojuegos</span><span class="project-icon" aria-hidden="true">▣</span></div>
-      <h3>Pulsa y Juega</h3>
-      <p>Un rincón dedicado a los videojuegos clásicos, la cultura de 8 bits y la memoria digital.</p>
-      <a class="text-link" href="https://pulsayjuega.es/" target="_blank" rel="noopener noreferrer">Conocer Pulsa y Juega ↗</a>
-    </article>
+    <article class="project"><div class="ptop"><span>Ciencia · Historia · Tecnología</span><span class="pico" aria-hidden="true">✦</span></div>
+      <h3>Orbe Autómata</h3><p>Un espacio de divulgación sobre ciencia, sistemas complejos e historia de la tecnología.</p>
+      <a class="text-link" href="https://www.orbeautomata.es/" target="_blank" rel="noopener noreferrer">Explorar Orbe Autómata ↗</a></article>
+    <article class="project"><div class="ptop"><span>Cultura retro · Videojuegos</span><span class="pico" aria-hidden="true">▣</span></div>
+      <h3>Pulsa y Juega</h3><p>Un rincón dedicado a los videojuegos clásicos, la cultura de 8 bits y la memoria digital.</p>
+      <a class="text-link" href="https://pulsayjuega.es/" target="_blank" rel="noopener noreferrer">Conocer Pulsa y Juega ↗</a></article>
   </div>
 </section>
 
-<section class="wrap section" id="contacto">
+<section class="wrap" id="contacto">
   <div class="contact">
-    <div>
-      <div class="eyebrow">05 / Contacto profesional</div>
-      <h2>¿Hablamos?</h2>
-      <p>Estoy abierto a conversaciones sobre oportunidades profesionales, colaboración y nuevos retos.</p>
-    </div>
-    <div class="actions flush">
+    <div><span class="eyebrow">05 / Contacto profesional</span><h2>¿Hablamos?</h2>
+    <p>Estoy abierto a conversaciones sobre oportunidades profesionales, colaboración y nuevos retos.</p></div>
+    <div class="actions">
       <a class="btn primary" href="mailto:contacto@retrovulcano.es?subject=Oportunidad%20profesional">Escribir un correo ↗</a>
-      <a class="btn secondary" href="https://www.linkedin.com/in/retrovulcano" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/retrovulcano" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
     </div>
   </div>
 </section>
@@ -296,7 +268,6 @@ img{max-width:100%;height:auto;display:block}
   <span>Hecha para la web, respetuosa con tu privacidad y sin rastreadores de terceros.</span>
   <span><a href="https://retrovulcano.es/" target="_blank" rel="noopener noreferrer">La web de RetroVulcano ↗</a></span>
 </footer>
-
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

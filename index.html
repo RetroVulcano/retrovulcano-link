@@ -49,7 +49,7 @@ h1,h2,h3{margin:0;font-family:var(--f);font-weight:800;letter-spacing:-.04em;lin
 .nav{display:flex;gap:4px;font-size:.92rem;font-weight:600}
 .nav a{padding:8px 14px;border-radius:99px;color:var(--mut);transition:background .2s,color .2s}
 .nav a:hover{background:var(--sky);color:var(--blue)}
-.nav a.active,.nav a[aria-current="true"]{background:var(--ink);color:#fff}
+.nav a.active,.nav a[aria-current="true"]{background:var(--blue);color:#fff}
 
 .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:70px 0 50px}
 .hero h1{font-size:clamp(3rem,7.4vw,6.6rem);margin:20px 0 26px}
@@ -65,7 +65,8 @@ h1,h2,h3{margin:0;font-family:var(--f);font-weight:800;letter-spacing:-.04em;lin
 .tag strong{display:block;font-size:1rem}
 .badge{position:absolute;right:-6px;bottom:-30px;width:118px;height:118px;border-radius:50%;background:var(--white);border:1px solid #dde1ea;display:grid;place-items:center}
 .badge svg{width:100%;height:100%;animation:spin 18s linear infinite}
-.badge text{font:700 10.5px var(--f);fill:var(--ink)}
+.badge text{font:700 14px var(--f);fill:var(--ink);text-anchor:middle}
+.badge .dot{fill:var(--org)}
 .badge b{position:absolute;font-size:1.6rem;color:var(--blue)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes rise{from{opacity:0;transform:translateY(34px)}}
@@ -196,7 +197,7 @@ summary{gap:6px}
   <div class="art">
     <picture><source srcset="avatar.webp" type="image/webp"><img class="portrait" src="avatar.png" width="680" height="680" fetchpriority="high" alt="Avatar ilustrado de David González"></picture>
     <div class="tag"><strong>David González</strong>Santa Cruz de Tenerife</div>
-    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text><textPath href="#c" textLength="272">Gestión · Personas · Procesos ·</textPath></text></svg><b>↗</b></div>
+    <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text><textPath href="#c" startOffset="16.667%">Gestión</textPath></text><text><textPath href="#c" startOffset="50%">Personas</textPath></text><text><textPath href="#c" startOffset="83.333%">Procesos</textPath></text><text class="dot"><textPath href="#c" startOffset="0%">·</textPath></text><text class="dot"><textPath href="#c" startOffset="33.333%">·</textPath></text><text class="dot"><textPath href="#c" startOffset="66.667%">·</textPath></text></svg><b>↗</b></div>
   </div>
  </div>
  <ul class="stats" aria-label="Resumen profesional">
